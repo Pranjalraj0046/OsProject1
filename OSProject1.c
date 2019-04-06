@@ -102,9 +102,15 @@ void f_queue(int process) {
     }while(flag != 0);
 
 
-    puts("\n\t\t\t********************************************");
-    puts("\t\t\t*****   ROUND ROBIN ALGORITHM OUTPUT   *****");
-    puts("\t\t\t********************************************\n");
+    printf("\t\t\t\t\t************************************************************************************************\n");
+	printf("\t\t\t\t\t************************************************************************************************\n");
+	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
+	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
+	printf("\t\t\t\t\t***\t\t\tWELCOME TO Round ROBIN SCHEDULING ALGORITHM                  ***\n");
+	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
+	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
+	printf("\t\t\t\t\t************************************************************************************************\n");
+	printf("\t\t\t\t\t************************************************************************************************\n");
     printf("\n|\tProcess Name\t  |\tArrival Time\t  |\tBurst Time\t |\tCompletion Time  \t|\n");
 
     for(i = 0; i < process; i++){
