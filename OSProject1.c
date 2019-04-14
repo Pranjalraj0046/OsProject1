@@ -25,12 +25,8 @@ void f_queue(int process) {
         scanf("%d", &f_process[i].b_time);
         puts("");
     }
-    printf("Now, enter the quantum time for FACULTY queue : ");
+    printf("Now, enter the Time Quantum for FACULTY queue : ");
     scanf("%d", &q_time);
-
-
-    // sorting the processes by their ARRIVAL time.
-    // if the ARRIVAL time is same then scheduling is based on FCFS.
     for(i = 0; i < process; i++) {
         for(int x = i +1; x < i; x++){
             if(f_process[i].a_time > f_process[x].a_time) {
@@ -40,8 +36,6 @@ void f_queue(int process) {
             }
         }
     }
-
-    // initialy all the burst time is left and completion of process is zero.
     for(i = 0; i < process; i++) {
         f_process[i].left = f_process[i].b_time;
         f_process[i].c_time = 0;
@@ -139,12 +133,8 @@ void student_Queue(int process) {
         printf("Burst Time : ");
         scanf("%d", &student_Process[i].b_time);
     }
-    printf("Now, enter the quantum time for STUDENT queue : ");
+    printf("Now, enter the Time Quantum for STUDENT queue : ");
     scanf("%d", &q_time);
-
-
-    // sorting the processes by their ARRIVAL time.
-    // if the ARRIVAL time is same then scheduling is based on FCFS.
     for(i = 0; i < process; i++) {
         for(int x = i +1; x < i; x++){
             if(student_Process[i].a_time > student_Process[x].a_time) {
@@ -154,8 +144,6 @@ void student_Queue(int process) {
             }
         }
     }
-
-    // initialy all the burst time is left and completion of process is zero.
     for(i = 0; i < process; i++) {
         student_Process[i].left = student_Process[i].b_time;
         student_Process[i].c_time = 0;
