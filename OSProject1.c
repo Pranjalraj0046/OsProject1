@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include <windows.h>
 #include<unistd.h>
 struct Queue{
 	int process_id;
@@ -158,19 +159,34 @@ void get(){
 }
 
 void header(){
+	int i;
+	char h[]={'W','E','L','C','O','M','E',' ','T','O',' ','O','N','L','I','N','E',' ','Q','U','E','R','I','E','S',' ','S','Y','S','T','E','M','/0'};
+	char a[]={'L','I','N','U','X',' ','E','X','P','E','R','T',' ','S','U','D','E','S','H',' ','S','H','A','R','M','A'};
 	printf("\t\t\t\t\t************************************************************************************************\n");
 	printf("\t\t\t\t\t************************************************************************************************\n");
 	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
 	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
-	printf("\t\t\t\t\t***\t\t\t\tWELCOME TO ONLINE QUERIES SYSTEM                             ***\n");
-	printf("\t\t\t\t\t***\t\t\t\t   LINUX EXPERT SUDESH SHARMA                                ***\n");
+	printf("\t\t\t\t\t***\t\t\t\t");
+	for(i=0;i<strlen(h)-3;i++)
+	{
+		printf("%c",h[i]);
+		Sleep(300);
+	}
+	printf("                             ***\n");
+	printf("\t\t\t\t\t***\t\t\t\t   ");
+	for(i=0;i<strlen(a);i++)
+	{
+		printf("%c",a[i]);
+		Sleep(300);
+	}
+	printf("                                ***\n");
 	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
 	printf("\t\t\t\t\t***\t\t\t\t\t\t\t\t\t\t                     ***\n");
 	printf("\t\t\t\t\t************************************************************************************************\n");
 	printf("\t\t\t\t\t************************************************************************************************\n");
 	printf("\nPlease follow following instruction given below\n"
-			"\n->All the t Enter in 2400 hours format. For Example, if time is 10:30 am then enter 1030\n"
-			"\n->A;ll the Queries are handle only between 10:00 am to 12:00 am\n"
+			"\n->All the time Enter in 2400 hours format. For Example, if time is 10:30 am then enter 1030\n"
+			"\n->All the Queries are handle only between 10:00 am to 12:00 am\n"
 			"\n->Enter all the arrival times in ascending order\n"
 			"\n->Here all the Time units are in minutes. \n"
 			"\n->At the field of job type enter 1 for faculty queries and 2 for student queries\n\n\n"
